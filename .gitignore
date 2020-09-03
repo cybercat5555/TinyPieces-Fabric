@@ -31,3 +31,4 @@ build/
 run/
 .classpath
 .project
+.idea
