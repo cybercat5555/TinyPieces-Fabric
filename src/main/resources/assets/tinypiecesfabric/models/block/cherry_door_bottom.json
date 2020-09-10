@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/door_bottom", "textures": {"bottom": "tinypiecesfabric:block/cherry_door_lower", "top": "tinypiecesfabric:block/cherry_door_upper"}}

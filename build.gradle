@@ -18,9 +18,14 @@ repositories {
 	maven{ url="http://server.bbkr.space:8081/artifactory/libs-release/" }
 }
 
+minecraft {
+	accessWidener = file("src/main/resources/tinypiecesfabric.aw")
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+//	mappings minecraft.officialMojangMappings()
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
