@@ -1,6 +1,0 @@
-{
-  "textures": {
-    "texture": "tinypiecesfabric:block/cherry_trapdoor"
-  },
-  "parent": "block/template_orientable_trapdoor_bottom"
-}

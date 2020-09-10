@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "axis=y": { "model": "tinypiecesfabric:block/willow_log" },
-        "axis=z": { "model": "tinypiecesfabric:block/willow_log", "x": 90 },
-        "axis=x": { "model": "tinypiecesfabric:block/willow_log", "x": 90, "y": 90 }
-    }
-}

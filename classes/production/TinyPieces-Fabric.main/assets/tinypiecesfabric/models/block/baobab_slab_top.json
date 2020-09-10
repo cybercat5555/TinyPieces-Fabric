@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "tinypiecesfabric:block/cherry_planks",
-    "side": "tinypiecesfabric:block/cherry_planks",
-    "top": "tinypiecesfabric:block/cherry_planks"
-  }
-}
