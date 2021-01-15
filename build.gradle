@@ -14,8 +14,6 @@ repositories {
 	mavenCentral()
 	mavenLocal()
 	jcenter()
-	maven{ url="https://jitpack.io" }
-	maven{ url="http://server.bbkr.space:8081/artifactory/libs-release/" }
 }
 
 minecraft {
@@ -29,9 +27,6 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	modImplementation "com.github.vampire-studios:VampireLib-Fabric:${project.vampirelib_version}"
-	include "com.github.vampire-studios:VampireLib-Fabric:${project.vampirelib_version}"
 }
 
 processResources {
