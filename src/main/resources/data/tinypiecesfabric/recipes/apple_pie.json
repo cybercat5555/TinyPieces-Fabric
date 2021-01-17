@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "XXX",
+    "WXW",
+    "WEW"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:apple"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "tinypiecesfabric:apple_pie",
+    "count": 1
+  }
+}

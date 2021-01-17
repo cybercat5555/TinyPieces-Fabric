@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "slices=4": {
+      "model": "tinypiecesfabric:block/honey_pie_4_slices"
+    },
+    "slices=3": {
+      "model": "tinypiecesfabric:block/honey_pie_3_slices"
+    },
+    "slices=2": {
+      "model": "tinypiecesfabric:block/honey_pie_2_slices"
+    },
+    "slices=1": {
+      "model": "tinypiecesfabric:block/honey_pie_1_slice"
+    }
+  }
+}

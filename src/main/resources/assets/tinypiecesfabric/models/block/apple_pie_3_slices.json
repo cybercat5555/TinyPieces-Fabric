@@ -1,0 +1,6 @@
+{
+  "parent": "tinypiecesfabric:block/pie_3_slices",
+  "textures": {
+    "particle": "tinypiecesfabric:block/apple_pie"
+  }
+}

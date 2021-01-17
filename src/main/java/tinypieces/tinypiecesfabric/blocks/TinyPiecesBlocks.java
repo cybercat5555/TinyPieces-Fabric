@@ -6,10 +6,13 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.registry.Registry;
 import tinypieces.tinypiecesfabric.TinyPieces;
+import tinypieces.tinypiecesfabric.statistics.TinyPiecesStatistics;
 
 public class TinyPiecesBlocks {
 
@@ -42,8 +45,21 @@ public class TinyPiecesBlocks {
 	public static final Block STRIPPED_WILLOW_LOG = register("stripped_willow_log", new DefaultLogBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
 	public static final Block STRIPPED_WILLOW_WOOD = register("stripped_willow_wood", new DefaultLogBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
 
+	public static final Block APPLE_PIE = register("apple_pie", new PieBlock(TinyPiecesStatistics.EAT_APPLE_PIE_SLICE, 3, 0.3f, new StatusEffectInstance(StatusEffects.REGENERATION, 10*20)), new FabricItemSettings().group(ItemGroup.FOOD).maxCount(1));
+	public static final Block HONEY_PIE = register("honey_pie", new PieBlock(TinyPiecesStatistics.EAT_HONEY_PIE_SLICE, 3, 0.4f, new StatusEffectInstance(StatusEffects.SPEED, 2*60*20)), new FabricItemSettings().group(ItemGroup.FOOD).maxCount(1));
+	public static final Block CHERRY_PIE = register("cherry_pie", new PieBlock(TinyPiecesStatistics.EAT_CHERRY_PIE_SLICE, 4, 0.4f, new StatusEffectInstance(StatusEffects.LUCK, 5*60*20)), new FabricItemSettings().group(ItemGroup.FOOD).maxCount(1));
+
 	public static Block register(String name, Block block, ItemGroup itemGroup) {
 		Registry.register(Registry.ITEM, TinyPieces.id(name), new BlockItem(block, new FabricItemSettings().group(itemGroup)));
+		return Registry.register(Registry.BLOCK, TinyPieces.id(name), block);
+	}
+
+	public static Block register(String name, Block block, FabricItemSettings blockItemSettings) {
+		Registry.register(Registry.ITEM, TinyPieces.id(name), new BlockItem(block, blockItemSettings));
+		return Registry.register(Registry.BLOCK, TinyPieces.id(name), block);
+	}
+
+	public static Block register(String name, Block block) {
 		return Registry.register(Registry.BLOCK, TinyPieces.id(name), block);
 	}
 
