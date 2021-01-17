@@ -3,6 +3,7 @@ package tinypieces.tinypiecesfabric;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import tinypieces.tinypiecesfabric.blocks.TinyPiecesBlocks;
+import tinypieces.tinypiecesfabric.statistics.TinyPiecesStatistics;
 
 public class TinyPieces implements ModInitializer {
 
@@ -11,6 +12,7 @@ public class TinyPieces implements ModInitializer {
     @Override
     public void onInitialize() {
         TinyPiecesBlocks.init();
+        TinyPiecesStatistics.init();
     }
 
     public static Identifier id(String name) {
